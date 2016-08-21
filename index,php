@@ -1,0 +1,24 @@
+<head>
+	<title>бла-бла-бла</title>
+	<link 
+		rel="stylesheet" href="style.css">
+</head>
+<form method="POST" action="">
+
+	<a>Введите угол наклона (от 30 до 60): </a><br/>
+	<input type="text" placeholder=" угол" name="kut">
+	<br>
+	<input type="submit" name="okbutton" value="OK">
+	<br/>
+	<div>
+<?php
+	if ( $_POST["kut"] >= "30" && $_POST["kut"] <= "60" ){
+		echo "попали ;)";
+	}else if ( $_POST["kut"] == "" ){
+		echo "значение не задано";
+	}else {
+		echo " промазали :(";
+	}
+?>
+	</div>
+</form>
